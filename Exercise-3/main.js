@@ -10,12 +10,10 @@ function computerChoice() {
     let randomOption = Math.floor(Math.random() * options.length)
 
     htmlComputerElement.textContent = `${options[randomOption]}`
-
     return options[randomOption]
 
     
 }
-
 
 
 function userChoice() {
@@ -25,11 +23,11 @@ function userChoice() {
     let userInput =  prompt("Pick rock, paper or scissors: ")
     userInput = userInput.toLowerCase()
 
-    
 
     while (!options.includes(userInput)) {
         alert("Invalid Input")
         userInput =  prompt("Pick rock, paper or scissors: ")
+        userInput = userInput.toLowerCase()
     } 
 
     htmlUserElement.textContent = `${userInput}`
